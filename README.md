@@ -40,4 +40,3 @@
 * [Devices and Displays](https://developer.android.com/design/style/devices-displays.html)
 ## Reference
 * [Java Tutorial](https://www.tutorialspoint.com/java/java_methods.htm)
->>>>>>> recycler-view
