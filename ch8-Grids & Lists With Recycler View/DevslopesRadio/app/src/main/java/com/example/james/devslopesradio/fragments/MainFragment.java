@@ -4,6 +4,7 @@ import android.content.Context;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -65,7 +66,23 @@ public class MainFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_main, container, false);
+        View v = inflater.inflate(R.layout.fragment_main, container, false);
+
+        FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
+        StationFragment stationFragment1;
+        StationFragment stationFragment2;
+        StationFragment stationFragment3;
+
+        stationFragment1 = StationFragment.newInstance("blah", "blah");
+        fragmentManager.beginTransaction().add(R.id.container_top_row, stationFragment1).commit();
+
+        stationFragment2 = StationFragment.newInstance("blah", "blah");
+        fragmentManager.beginTransaction().add(R.id.container_middle_row, stationFragment2).commit();
+
+        stationFragment3 = StationFragment.newInstance("blah", "blah");
+        fragmentManager.beginTransaction().add(R.id.container_bottom_row, stationFragment3).commit();
+
+        return v;
     }
 
     // TODO: Rename method, update argument and hook method into UI event
