@@ -1,6 +1,6 @@
-# Android-N #
+# Learning Android #
 
-# 學習目標
+## 目標
 * 實作兩個 Activities
 * 實作 Fragments
 * 實作 Broadcasts 機制
@@ -10,7 +10,7 @@
 * 實作遠端資料庫
 * 上架至 google play
 
-# 學習計畫
+## 學習計畫
 1. Java basic
 2. Android basic
 3. Activities
@@ -25,18 +25,21 @@
 12. Constraint Layout
 13. Publishing
 
-# 學習資源
-## 線上課程(推薦)
+## 資源
+### 線上課程(推薦)
 * [Android N: From Beginner to Paid Professional](https://www.udemy.com/learn-android/learn/v4/overview)
-## Guide
+### Guide
 * [API Guides | Android Developers](https://developer.android.com/guide/index.html)
 * [Supporting Multiple Screens](https://developer.android.com/guide/practices/screens_support.html)
 * [使用材料設計風格](https://developer.android.com/training/material/theme.html?hl=zh-tw)
-## Training
+### Training
 * [Training](https://developer.android.com/training/index.html)
 * [Supporting Different Densities](https://developer.android.com/training/multiscreen/screendensities.html)
-## Design
+### Design
 * [Material Design for Developers](https://material.io/guidelines/material-design/introduction.html)
 * [Devices and Displays](https://developer.android.com/design/style/devices-displays.html)
-## Reference
+### Reference
 * [Java Tutorial](https://www.tutorialspoint.com/java/java_methods.htm)
+
+## 備註
+程式碼來源來自 [Android N: From Beginner to Paid Professional](https://www.udemy.com/learn-android/learn/v4/content) - Udemy 課程內容
