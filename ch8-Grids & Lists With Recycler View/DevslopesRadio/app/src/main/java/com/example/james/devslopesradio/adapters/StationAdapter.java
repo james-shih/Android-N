@@ -6,6 +6,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.example.james.devslopesradio.R;
+import com.example.james.devslopesradio.activities.MainActivity;
 import com.example.james.devslopesradio.holders.StationViewHolder;
 import com.example.james.devslopesradio.model.Station;
 
@@ -25,8 +26,16 @@ public class StationAdapter extends RecyclerView.Adapter<StationViewHolder> {
 
     @Override
     public void onBindViewHolder(StationViewHolder holder, int position) {
-        Station station = stations.get(position);
+        final Station station = stations.get(position);
         holder.updateUI(station);
+
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //Load the details
+                MainActivity.getMainActivity().laodDetailsScreen(station);
+            }
+        });
     }
 
     @Override
