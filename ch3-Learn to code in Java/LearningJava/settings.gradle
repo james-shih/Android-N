@@ -1,1 +1,1 @@
-include ':app', ':learnjava'
+include ':app', ':learnJava'

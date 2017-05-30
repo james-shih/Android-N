@@ -12,7 +12,7 @@ public class CalcActivity extends Activity {
     TextView resultsView;
 
     public enum Operation {
-        ADD, SUBTRUCT, DIVIDE, MULTIPLY, EQUAL
+        ADD, SUBTRACT, DIVIDE, MULTIPLY, EQUAL
     }
 
     String runningNumber = "";
@@ -142,7 +142,7 @@ public class CalcActivity extends Activity {
         subtractBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                processOperation(Operation.SUBTRUCT);
+                processOperation(Operation.SUBTRACT);
             }
         });
 
@@ -177,7 +177,7 @@ public class CalcActivity extends Activity {
                     case ADD:
                         result = Integer.parseInt(leftValueStr) + Integer.parseInt(rightValueStr);
                         break;
-                    case  SUBTRUCT:
+                    case SUBTRACT:
                         result = Integer.parseInt(leftValueStr) - Integer.parseInt(rightValueStr);
                         break;
                     case MULTIPLY:

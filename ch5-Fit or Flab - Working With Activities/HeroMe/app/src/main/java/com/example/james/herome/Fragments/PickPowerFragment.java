@@ -96,7 +96,7 @@ public class PickPowerFragment extends Fragment implements View.OnClickListener 
             @Override
             public void onClick(View v) {
                 MainActivity mainActivity = (MainActivity)getActivity();
-                mainActivity.laodCharacterScreen();
+                mainActivity.loadCharacterScreen();
             }
         });
 

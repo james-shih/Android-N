@@ -34,7 +34,7 @@ public class MainActivity extends AppCompatActivity implements MainFragment.Main
         getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, pickPowerFragment).addToBackStack(null).commit();
     }
 
-    public void laodCharacterScreen() {
+    public void loadCharacterScreen() {
         CharacterFragment characterFragment = new CharacterFragment();
         getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, characterFragment).addToBackStack(null).commit();
     }

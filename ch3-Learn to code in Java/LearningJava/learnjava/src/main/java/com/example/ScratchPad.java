@@ -1,7 +1,5 @@
 package com.example;
 
-import java.awt.Rectangle;
-
 import shape.Triangle;
 import vehicle.Bus;
 import vehicle.Car;
