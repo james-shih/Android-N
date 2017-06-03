@@ -27,8 +27,10 @@ import com.jamesshih.bootcamplocator.fragments.MainFragment;
 
 public class MapsActivity extends FragmentActivity implements GoogleApiClient.OnConnectionFailedListener, GoogleApiClient.ConnectionCallbacks, com.google.android.gms.location.LocationListener {
 
-    private GoogleApiClient mGoogleApiClient;
     final int PERMISSION_LOCATION = 111;
+
+    private GoogleApiClient mGoogleApiClient;
+    private MainFragment mainFragment;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,7 +43,7 @@ public class MapsActivity extends FragmentActivity implements GoogleApiClient.On
                 .addApi(LocationServices.API)
                 .build();
 
-        MainFragment mainFragment = (MainFragment)getSupportFragmentManager().findFragmentById(R.id.container_main);
+        mainFragment = (MainFragment)getSupportFragmentManager().findFragmentById(R.id.container_main);
         if (mainFragment == null) {
             mainFragment = MainFragment.newInstance();
             getSupportFragmentManager().beginTransaction().add(R.id.container_main, mainFragment).commit();
@@ -62,6 +64,7 @@ public class MapsActivity extends FragmentActivity implements GoogleApiClient.On
     @Override
     public void onLocationChanged(Location location) {
         Log.v("DONKEY", "Long: " + location.getLongitude() + " - Lag: " + location.getLatitude());
+        mainFragment.setUserLocation(new LatLng(location.getLatitude(), location.getLongitude()));
     }
 
     @Override
